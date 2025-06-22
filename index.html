@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jyoti Raut</title>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a href="#" class="text-xl font-bold text-gray-900"
+              >Jyoti &nbsp;<span class="text-green-600">Raut</span></a
+            >
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="#home" class="nav-link text-gray-700 hover:text-green-600"
+              >Home</a
+            >
+            <a href="#about" class="nav-link text-gray-700 hover:text-green-600"
+              >About</a
+            >
+            <a
+              href="#skills"
+              class="nav-link text-gray-700 hover:text-green-600"
+              >Skills</a
+            >
+            <a
+              href="#projects"
+              class="nav-link text-gray-700 hover:text-green-600"
+              >Projects</a
+            >
+            <a
+              href="#contact"
+              class="nav-link text-gray-700 hover:text-green-600"
+              >Contact</a
+            >
+          </div>
+          <div class="md:hidden flex items-center">
+            <button id="menu-btn" class="text-gray-700">
+              <i class="fas fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white py-4 px-4 shadow-lg"
+      >
+        <div class="flex flex-col space-y-4">
+          <a href="#home" class="nav-link text-gray-700 hover:text-green-600"
+            >Home</a
+          >
+          <a href="#about" class="nav-link text-gray-700 hover:text-green-600"
+            >About</a
+          >
+          <a href="#skills" class="nav-link text-gray-700 hover:text-green-600"
+            >Skills</a
+          >
+          <a
+            href="#projects"
+            class="nav-link text-gray-700 hover:text-green-600"
+            >Projects</a
+          >
+          <a href="#contact" class="nav-link text-gray-700 hover:text-green-600"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="pt-24 pb-16 md:pt-32 md:pb-24 gradient-bg text-white"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">
+              Hi, I'm <span class="text-yellow-300">Jyoti</span>
+            </h1>
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6">
+              Frontend Developer
+            </h2>
+            <p class="text-lg mb-8 opacity-90">
+              I’ve developed and maintained reusable components, optimized UI
+              performance, and collaborated closely with UX and backend teams to
+              deliver high-quality products.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#contact"
+                class="px-6 py-3 bg-white text-green-600 font-medium rounded-full hover:bg-gray-100 transition duration-300"
+                >Hire Me</a
+              >
+              <a
+                href="#projects"
+                class="px-6 py-3 border-2 border-white text-white font-medium rounded-full hover:bg-white hover:text-green-600 transition duration-300"
+                >View Work</a
+              >
+            </div>
+          </div>
+          <div class="md:w-1/2 flex justify-center">
+            <div class="relative w-64 h-64 md:w-80 md:h-80">
+              <div
+                class="absolute inset-0 bg-green-500 rounded-full opacity-20 blur-xl"
+              ></div>
+              <img
+                src="assets/pic1.jpg"
+                alt="Developer"
+                class="relative w-full h-full object-cover rounded-full border-4 border-white shadow-xl floating"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            About <span class="text-green-600">Me</span>
+          </h2>
+          <div class="w-20 h-1 bg-green-600 mx-auto"></div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center">
+            <div class="relative w-64 h-64">
+              <div
+                class="absolute -inset-4 border-2 border-green-500 rounded-lg transform rotate-6"
+              ></div>
+              <img
+                src="assets/pic2.jpg"
+                alt="About Me"
+                class="relative w-full h-full object-cover rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+
+          <div class="md:w-2/3 md:pl-12">
+            <h3 class="text-2xl font-bold mb-6">
+              Crafting Digital Experiences
+            </h3>
+            <p class="text-gray-700 mb-6">
+              I'm a passionate frontend developer with nearly 3 years of
+              experience creating modern, responsive websites and web
+              applications. I specialize in Angular, React, JavaScript,
+              Typescript and modern JavaScript frameworks.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div class="flex items-start">
+                <div class="bg-green-100 p-3 rounded-full mr-4">
+                  <i class="fas fa-code text-green-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-1">Clean Code</h4>
+                  <p class="text-gray-600 text-sm">
+                    I write clean, maintainable code following best practices.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="bg-green-100 p-3 rounded-full mr-4">
+                  <i class="fas fa-mobile-alt text-green-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-1">Responsive Design</h4>
+                  <p class="text-gray-600 text-sm">
+                    All my projects are fully responsive across all devices.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="bg-green-100 p-3 rounded-full mr-4">
+                  <i class="fas fa-bolt text-green-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-1">Fast Performance</h4>
+                  <p class="text-gray-600 text-sm">
+                    I optimize for speed and performance.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="bg-green-100 p-3 rounded-full mr-4">
+                  <i class="fas fa-search text-green-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-1">SEO Friendly</h4>
+                  <p class="text-gray-600 text-sm">
+                    My code follows SEO best practices.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="assets/Jyoti Raut_Resume.pdf"
+                class="px-6 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition duration-300 flex items-center"
+              >
+                <i class="fas fa-download mr-2"></i>Download CV
+              </a>
+              <a
+                href="#contact"
+                class="px-6 py-2 border-2 border-green-600 text-green-600 rounded-full hover:bg-green-600 hover:text-white transition duration-300"
+              >
+                Contact Me
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            My <span class="text-green-600">Skills</span>
+          </h2>
+          <div class="w-20 h-1 bg-green-600 mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div>
+            <h3 class="text-2xl font-bold mb-6">Coding Skills</h3>
+
+            <div class="space-y-6">
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">Angular</span>
+                  <span class="text-green-600">85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 85%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">React.js</span>
+                  <span class="text-green-600">60%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 60%"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">JavaScript</span>
+                  <span class="text-green-600">85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 85%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">HTML5</span>
+                  <span class="text-green-600">95%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 95%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-bold mb-6">Design Skills</h3>
+
+            <div class="space-y-6">
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">CSS3 & Tailwind</span>
+                  <span class="text-green-600">90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 90%"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">Figma</span>
+                  <span class="text-green-600">80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 80%"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">UI/UX Design</span>
+                  <span class="text-green-600">85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 85%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-16">
+          <h3 class="text-2xl font-bold mb-8 text-center">
+            Tools & Technologies
+          </h3>
+
+          <div class="flex flex-wrap justify-center gap-8">
+            <div class="flex flex-col items-center">
+              <div
+                class="w-16 h-16 bg-white rounded-full shadow-md flex items-center justify-center mb-2"
+              >
+                <i class="fab fa-html5 text-3xl text-orange-500"></i>
+              </div>
+              <span class="text-sm font-medium">HTML5</span>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <div
+                class="w-16 h-16 bg-white rounded-full shadow-md flex items-center justify-center mb-2"
+              >
+                <i class="fab fa-css3-alt text-3xl text-blue-500"></i>
+              </div>
+              <span class="text-sm font-medium">CSS3</span>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <div
+                class="w-16 h-16 bg-white rounded-full shadow-md flex items-center justify-center mb-2"
+              >
+                <i class="fab fa-js text-3xl text-yellow-500"></i>
+              </div>
+              <span class="text-sm font-medium">JavaScript</span>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <div
+                class="w-16 h-16 bg-white rounded-full shadow-md flex items-center justify-center mb-2"
+              >
+                <i class="fab fa-angular text-3xl text-red-600"></i>
+              </div>
+              <span class="text-sm font-medium">Angular</span>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <div
+                class="w-16 h-16 bg-white rounded-full shadow-md flex items-center justify-center mb-2"
+              >
+                <i class="fab fa-react text-3xl text-blue-400"></i>
+              </div>
+              <span class="text-sm font-medium">React</span>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <div
+                class="w-16 h-16 bg-white rounded-full shadow-md flex items-center justify-center mb-2"
+              >
+                <i class="fab fa-git-alt text-3xl text-orange-600"></i>
+              </div>
+              <span class="text-sm font-medium">Git</span>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <div
+                class="w-16 h-16 bg-white rounded-full shadow-md flex items-center justify-center mb-2"
+              >
+                <i class="fab fa-bootstrap text-3xl text-green-500"></i>
+              </div>
+              <span class="text-sm font-medium">Bootstrap</span>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <div
+                class="w-16 h-16 bg-white rounded-full shadow-md flex items-center justify-center mb-2"
+              >
+                <i class="fab fa-npm text-3xl text-red-500"></i>
+              </div>
+              <span class="text-sm font-medium">npm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            My <span class="text-green-600">Projects</span>
+          </h2>
+          <div class="w-20 h-1 bg-green-600 mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div class="project-card h-full">
+            <div class="project-inner h-full">
+              <div
+                class="project-front h-full bg-white rounded-lg overflow-hidden shadow-lg card-hover"
+              >
+                <img
+                  src="assets/new-app.png"
+                  alt="Project 1"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-6">
+                  <h3 class="text-xl font-bold mb-2">News Application</h3>
+                  <p class="text-gray-600 mb-4">
+                    A sleek and fast news application that delivers news
+                    articles from around the world with a focus on speed,
+                    visualization, and usability. This project uses a
+                    third-party API from NewsAPI to fetch real-time news data.
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full"
+                      >JavaScript</span
+                    >
+                    <span
+                      class="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full"
+                      >HTML</span
+                    >
+                    <span
+                      class="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full"
+                      >CSS</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="project-back absolute inset-0 bg-green-600 text-white p-6 rounded-lg flex flex-col justify-center"
+              >
+                <h3 class="text-xl font-bold mb-2">News Application</h3>
+                <p class="mb-4">
+                  Stay updated with the latest news from around the world using
+                  our sleek and fast news app — built for speed, stunning
+                  visuals, and a seamless experience.
+                </p>
+                <div class="flex space-x-4">
+                  <!-- <a
+                    href="#"
+                    class="px-4 py-2 bg-white text-green-600 rounded-full text-sm font-medium"
+                    >Live Demo</a
+                  > -->
+                  <a
+                    href="https://github.com/jyraut/News-Application"
+                    class="px-4 py-2 border border-white rounded-full text-sm font-medium"
+                    >Code</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card h-full">
+            <div class="project-inner h-full">
+              <div
+                class="project-front h-full bg-white rounded-lg overflow-hidden shadow-lg card-hover"
+              >
+                <img
+                  src="assets/flipbook.png"
+                  alt="Project 2"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-6">
+                  <h3 class="text-xl font-bold mb-2">Flipbook</h3>
+                  <p class="text-gray-600 mb-4">
+                    An interactive and responsive Flipbook-style PDF Viewer
+                    built using Angular and PDF.js. This project simulates a
+                    realistic book-reading experience with animated page turns
+                    and supports both desktop and mobile views.
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full"
+                      >Angular</span
+                    >
+                    <span
+                      class="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full"
+                      >TypeScript</span
+                    >
+                    <span
+                      class="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full"
+                      >PDF.js</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="project-back absolute inset-0 bg-green-600 text-white p-6 rounded-lg flex flex-col justify-center"
+              >
+                <h3 class="text-xl font-bold mb-2">Flipbook</h3>
+                <p class="mb-4">
+                  Experience realistic book reading with our interactive
+                  Flipbook PDF Viewer! Enjoy smooth page-turn animations and
+                  responsive design for both desktop and mobile — built with
+                  Angular and PDF.js.
+                </p>
+                <div class="flex space-x-4">
+                  <!-- <a
+                    href="#"
+                    class="px-4 py-2 bg-white text-green-600 rounded-full text-sm font-medium"
+                    >Live Demo</a
+                  > -->
+                  <a
+                    href="https://github.com/jyraut/flipbook-animation"
+                    class="px-4 py-2 border border-white rounded-full text-sm font-medium"
+                    >Code</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card h-full">
+            <div class="project-inner h-full">
+              <div
+                class="project-front h-full bg-white rounded-lg overflow-hidden shadow-lg card-hover"
+              >
+                <img
+                  src="assets/food-zone image.png"
+                  alt="Project 3"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-6">
+                  <h3 class="text-xl font-bold mb-2">FOOD ZONE</h3>
+                  <p class="text-gray-600 mb-4">
+                    A simple and responsive food recipe search app built with
+                    React. It allows users to search for recipes by dish name
+                    and view matching meals using TheMealDB API.
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full"
+                      >React</span
+                    >
+                    <span
+                      class="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full"
+                      >React Router DOM</span
+                    >
+                    <span
+                      class="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full"
+                      >TheMealDB API
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="project-back absolute inset-0 bg-green-600 text-white p-6 rounded-lg flex flex-col justify-center"
+              >
+                <h3 class="text-xl font-bold mb-2">FOOD ZONE</h3>
+                <p class="mb-4">
+                  Discover delicious recipes with our simple and responsive food
+                  app! Search meals by name and explore tasty dishes instantly
+                </p>
+                <div class="flex space-x-4">
+                  <!-- <a
+                    href="#"
+                    class="px-4 py-2 bg-white text-green-600 rounded-full text-sm font-medium"
+                    >Live Demo</a
+                  > -->
+                  <a
+                    href="https://github.com/jyraut/food-recipe-app"
+                    class="px-4 py-2 border border-white rounded-full text-sm font-medium"
+                    >Code</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="text-center mt-12">
+          <a
+            href="#"
+            class="inline-block px-8 py-3 bg-green-600 text-white rounded-full font-medium hover:bg-green-700 transition duration-300"
+          >
+            View All Projects <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Get In <span class="text-green-600">Touch</span>
+          </h2>
+          <div class="w-20 h-1 bg-green-600 mx-auto"></div>
+        </div>
+
+        <div class="flex flex-col md:flex-row">
+          <div class="md:w-1/2 mb-10 md:mb-0">
+            <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+            <p class="text-gray-700 mb-8">
+              Feel free to reach out to me for any questions or opportunities.
+              I'll get back to you as soon as possible.
+            </p>
+
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="bg-green-100 p-3 rounded-full mr-4">
+                  <!-- <i class="fas fa-envelope text-green-600"></i> -->
+                  <img
+                    src="assets/Icons/mail.svg"
+                    alt="mail"
+                    width="20"
+                    height="20"
+                  />
+                </div>
+                <div>
+                  <h4 class="font-bold mb-1">Email</h4>
+                  <p class="text-gray-600">jyotiraut2002@gmail.com</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="bg-green-100 p-3 rounded-full mr-4">
+                  <!-- <i class="fas fa-phone-alt text-green-600"></i> -->
+                  <img
+                    src="assets/Icons/phone.svg"
+                    alt="phone"
+                    width="20"
+                    height="20"
+                  />
+                </div>
+                <div>
+                  <h4 class="font-bold mb-1">Phone</h4>
+                  <p class="text-gray-600">+91 9667488857</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="bg-green-100 p-3 rounded-full mr-4">
+                  <!-- <i class="fas fa-map-marker-alt text-green-600"></i> -->
+                  <img
+                    src="assets/Icons/location.svg"
+                    alt="Location"
+                    width="20"
+                    height="20"
+                  />
+                </div>
+                <div>
+                  <h4 class="font-bold mb-1">Location</h4>
+                  <p class="text-gray-600">Noida</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <h4 class="font-bold mb-4">Follow Me</h4>
+              <div class="flex space-x-4">
+                <a
+                  href="https://github.com/jyraut"
+                  class="w-10 h-10 text-white rounded-full flex items-center justify-center hover:bg-green-700 transition duration-300"
+                >
+                  <img src="assets/Icons/github.svg" alt="" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/jyoti-raut-767174244 "
+                  class="w-10 h-10 text-white rounded-full flex items-center justify-center hover:bg-green-700 transition duration-300"
+                >
+                  <img src="assets/Icons/linkedIn.jpeg" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:w-1/2 md:pl-12">
+            <form id="contact-form" class="bg-white p-8 rounded-lg shadow-lg">
+              <input type="hidden" name="_captcha" value="false" />
+
+              <label class="block text-gray-700 font-medium mb-2"
+                >Your Name</label
+              >
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
+                required
+              />
+
+              <label class="block text-gray-700 font-medium mb-2"
+                >Your Email</label
+              >
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
+                required
+              />
+
+              <label for="subject" class="block text-gray-700 font-medium mb-2"
+                >Subject</label
+              >
+              <input
+                type="text"
+                name="title"
+                placeholder="Subject"
+                required
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
+              />
+
+              <label for="message" class="block text-gray-700 font-medium mb-2"
+                >Your Message</label
+              >
+              <textarea
+                name="message"
+                rows="5"
+                required
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
+              ></textarea>
+
+              <button
+                type="submit"
+                class="w-full px-6 py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition duration-300"
+              >
+                Send Message <i class="fas fa-paper-plane ml-2"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
