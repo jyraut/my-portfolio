@@ -69,24 +69,7 @@ if (contactForm) {
   });
 }
 
-//View all Project
-const toggleBtn = document.getElementById("toggle-projects-btn");
-const extraProjects = document.getElementById("extra-projects");
 
-toggleBtn.addEventListener("click", function (e) {
-  e.preventDefault();
-  const isHidden = extraProjects.classList.contains("hidden");
-
-  if (isHidden) {
-    extraProjects.classList.remove("hidden");
-    toggleBtn.innerHTML =
-      'View Less Projects <i class="fas fa-arrow-up ml-2"></i>';
-  } else {
-    extraProjects.classList.add("hidden");
-    toggleBtn.innerHTML =
-      'View All Projects <i class="fas fa-arrow-right ml-2"></i>';
-  }
-});
 
 // Initialize EmailJS with your public key
 (function () {

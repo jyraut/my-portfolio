@@ -88,45 +88,77 @@
     <!-- Hero Section -->
     <section
       id="home"
-      class="pt-24 pb-16 md:pt-32 md:pb-24 gradient-bg text-white"
+      class="relative pt-24 pb-16 md:pt-36 md:pb-28 gradient-bg text-white overflow-hidden hero-grid-overlay"
     >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row items-center">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="flex flex-col md:flex-row items-center gap-12">
           <div class="md:w-1/2 mb-10 md:mb-0">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">
+            <!-- Opportunities Status Badge -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white-5 text-white border border-white-20 text-xs font-semibold mb-6">
+              <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+              </span>
+              Available for Opportunities
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight leading-tight">
               Hi, I'm <span class="text-yellow-300">Jyoti</span>
             </h1>
-            <h2 class="text-2xl md:text-3xl font-semibold mb-6">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-white opacity-95">
               Frontend Developer
             </h2>
-            <p class="text-lg mb-8 opacity-90">
-              I’ve developed and maintained reusable components, optimized UI
-              performance, and collaborated closely with UX and backend teams to
-              deliver high-quality products.
+            <p class="text-lg mb-8 text-white opacity-90 max-w-xl leading-relaxed">
+              I design and build high-performance, responsive web applications. Specialized in creating beautiful reusable components, optimizing UI performance, and crafting pixel-perfect interfaces.
             </p>
-            <div class="flex space-x-4">
+            <div class="flex flex-wrap gap-4">
               <a
                 href="#contact"
-                class="px-6 py-3 bg-white text-green-600 font-medium rounded-full hover:bg-gray-100 transition duration-300"
-                >Hire Me</a
+                class="px-8 py-3.5 bg-white text-green-600 font-semibold rounded-xl shadow-md hover:bg-slate-50 transition-all duration-300 transform hover:-translate-y-0.5 flex items-center gap-2"
+                >Hire Me <i class="fas fa-arrow-right text-xs"></i></a
               >
               <a
                 href="#projects"
-                class="px-6 py-3 border-2 border-white text-white font-medium rounded-full hover:bg-white hover:text-green-600 transition duration-300"
+                class="px-8 py-3.5 bg-white-5 border-white hover:bg-white-10 text-white font-semibold rounded-xl border border-white-20 hover:border-white transition-all duration-300 backdrop-blur-md flex items-center gap-2"
                 >View Work</a
               >
             </div>
           </div>
-          <div class="md:w-1/2 flex justify-center">
-            <div class="relative w-64 h-64 md:w-80 md:h-80">
-              <div
-                class="absolute inset-0 bg-green-500 rounded-full opacity-20 blur-xl"
-              ></div>
-              <img
-                src="assets/pic1.jpg"
-                alt="Developer"
-                class="relative w-full h-full object-cover rounded-full border-4 border-white shadow-xl floating"
-              />
+          
+          <div class="md:w-1/2 flex justify-center relative">
+            <!-- Outer element with bounce/float animation -->
+            <div class="relative w-72 h-72 md:w-96 md:h-96 animate-bounce-slow">
+              <!-- Main profile card container -->
+              <div class="profile-image-container w-full h-full rounded-2xl overflow-hidden shadow-2xl border border-white-10 relative z-10">
+                <img
+                  src="assets/pic1.jpg"
+                  alt="Jyoti Raut"
+                  class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+
+              <!-- Float Badges -->
+              <!-- Badge 1: Experience -->
+              <div class="absolute -bottom-4 -left-6 bg-white-10 backdrop-blur-md border border-white-20 p-3.5 rounded-xl flex items-center gap-3 shadow-xl z-20">
+                <div class="p-2 bg-white-10 text-white rounded-lg">
+                  <i class="fas fa-briefcase"></i>
+                </div>
+                <div>
+                  <div class="text-[10px] text-white opacity-80 font-medium uppercase tracking-wider">Experience</div>
+                  <div class="text-sm font-bold text-white">3+ Years</div>
+                </div>
+              </div>
+
+              <!-- Badge 2: Tech stack -->
+              <div class="absolute -top-4 -right-6 bg-white-10 backdrop-blur-md border border-white-20 p-3.5 rounded-xl flex items-center gap-3 shadow-xl z-20">
+                <div class="p-2 bg-white-10 text-white rounded-lg">
+                  <i class="fas fa-code"></i>
+                </div>
+                <div>
+                  <div class="text-[10px] text-white opacity-80 font-medium uppercase tracking-wider">Focus</div>
+                  <div class="text-sm font-bold text-white">React &amp; Angular</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -422,7 +454,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-16 bg-white">
+    <section id="projects" class="py-16 bg-white relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-bold mb-4">
@@ -432,309 +464,217 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Project 1 -->
-          <div class="project-card h-full">
-            <div class="project-inner h-full">
-              <div
-                class="project-front h-full bg-white rounded-lg overflow-hidden shadow-lg card-hover"
-              >
+          <!-- Project 1: ValoQuest - Survey Portal -->
+          <div class="project-card">
+            <div class="project-inner">
+              <div class="project-front flex flex-col shadow-md">
+                <img
+                  src="assets/valoquest.png"
+                  alt="ValoQuest - Survey Portal"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                  <div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">ValoQuest - Survey Portal</h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3 leading-relaxed">
+                      Developed an interactive survey creation and analytics platform supporting both enterprise and individual users with role-based access control.
+                    </p>
+                  </div>
+                  <div class="flex flex-wrap gap-2 mt-auto">
+                    <span class="px-2 py-1 bg-green-50 text-green-700 text-xs rounded-full border border-green-100">React.js</span>
+                    <span class="px-2 py-1 bg-green-50 text-green-700 text-xs rounded-full border border-green-100">Redux Toolkit</span>
+                    <span class="px-2 py-1 bg-green-50 text-green-700 text-xs rounded-full border border-green-100">JWT Auth</span>
+                    <span class="px-2 py-1 bg-green-50 text-green-700 text-xs rounded-full border border-green-100">Vite</span>
+                    <span class="px-2 py-1 bg-green-50 text-green-700 text-xs rounded-full border border-green-100">RESTful APIs</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-back p-6 flex flex-col justify-center shadow-md">
+                <h3 class="text-xl font-bold mb-2">ValoQuest - Survey Portal</h3>
+                <p class="text-sm mb-6 leading-relaxed">
+                  Key contributions: Built modular UI in React/Redux Toolkit, implemented role-based JWT auth, designed a three-mode survey builder, integrated publishing and analytics, and optimized performance.
+                </p>
+                <div class="flex space-x-4">
+                  <a
+                    href="#"
+                    class="px-4 py-2 bg-white text-green-600 rounded-xl text-sm font-semibold hover:bg-gray-100 transition-colors shadow-md flex items-center gap-1.5"
+                  >
+                    <i class="fas fa-external-link-alt text-xs"></i> Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: OptimaForge ERP -->
+          <div class="project-card">
+            <div class="project-inner">
+              <div class="project-front flex flex-col shadow-md">
                 <img
                   src="assets/erpcore.png"
                   alt="OptimaForge ERP"
                   class="w-full h-48 object-cover"
                 />
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">OptimaForge ERP</h3>
-                  <p class="text-gray-600 mb-4">
-                    A high-density industrial dashboard for logistics and
-                    personnel management. Built with Next.js 14, featuring
-                    multi-warehouse tracking, real-time fiscal tax logic, and
-                    role-based access control.
-                  </p>
-                  <div class="flex flex-wrap gap-2">
-                    <span
-                      class="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full"
-                      >Next.js 14</span
-                    >
-                    <span
-                      class="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full"
-                      >TypeScript</span
-                    >
-                    <span
-                      class="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full"
-                      >Tailwind</span
-                    >
-                    <span
-                      class="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full"
-                      >TanStack Query</span
-                    >
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                  <div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">OptimaForge ERP</h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3 leading-relaxed">
+                      A high-density industrial dashboard for logistics and personnel management. Built with Next.js 14, featuring multi-warehouse tracking, real-time fiscal tax logic, and role-based access control.
+                    </p>
+                  </div>
+                  <div class="flex flex-wrap gap-2 mt-auto">
+                    <span class="px-2 py-1 bg-green-50 text-green-700 text-xs rounded-full border border-green-100">Next.js 14</span>
+                    <span class="px-2 py-1 bg-green-50 text-green-700 text-xs rounded-full border border-green-100">TypeScript</span>
+                    <span class="px-2 py-1 bg-green-50 text-green-700 text-xs rounded-full border border-green-100">Tailwind</span>
+                    <span class="px-2 py-1 bg-green-50 text-green-700 text-xs rounded-full border border-green-100">TanStack Query</span>
                   </div>
                 </div>
               </div>
-
-              <div
-                class="project-back absolute inset-0 bg-green-600 text-white p-6 rounded-lg flex flex-col justify-center"
-              >
+              <div class="project-back p-6 flex flex-col justify-center shadow-md">
                 <h3 class="text-xl font-bold mb-2">OptimaForge ERP</h3>
-                <p class="mb-4">
-                  Optimized for large-scale data management. Features include
-                  responsive hybrid layouts (Table/Cards), CSV data exports, and
-                  secured administrative actions using Permission Gates.
+                <p class="text-sm mb-6 leading-relaxed">
+                  Optimized for large-scale data management. Features include responsive hybrid layouts (Table/Cards), CSV data exports, and secured administrative actions using Permission Gates.
                 </p>
                 <div class="flex space-x-4">
                   <a
                     href="https://erp-core-vert.vercel.app/dashboard"
                     target="_blank"
-                    class="px-4 py-2 bg-white text-green-600 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors"
-                    >Live Demo</a
+                    class="px-4 py-2 bg-white text-green-600 rounded-xl text-sm font-semibold hover:bg-gray-100 transition-colors shadow-md flex items-center gap-1.5"
                   >
+                    <i class="fas fa-external-link-alt text-xs"></i> Live Demo
+                  </a>
                   <a
                     href="https://github.com/jyraut/ERPcore"
                     target="_blank"
-                    class="px-4 py-2 border border-white rounded-full text-sm font-medium hover:bg-white hover:text-green-600 transition-colors"
-                    >Code</a
+                    class="px-4 py-2 border border-white rounded-xl text-sm font-semibold hover:bg-white hover:text-green-600 transition-colors flex items-center gap-1.5"
                   >
+                    <i class="fab fa-github text-xs"></i> Code
+                  </a>
                 </div>
               </div>
             </div>
           </div>
-          <!-- Project 2 -->
-          <div class="project-card h-full">
-            <div class="project-inner h-full">
-              <div
-                class="project-front h-full bg-white rounded-lg overflow-hidden shadow-lg card-hover"
-              >
+
+          <!-- Project 3: News Application -->
+          <div class="project-card">
+            <div class="project-inner">
+              <div class="project-front flex flex-col shadow-md">
                 <img
                   src="assets/new-app.png"
-                  alt="Project 1"
+                  alt="News Application"
                   class="w-full h-48 object-cover"
                 />
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">News Application</h3>
-                  <p class="text-gray-600 mb-4">
-                    A sleek and fast news application that delivers news
-                    articles from around the world with a focus on speed,
-                    visualization, and usability. This project uses a
-                    third-party API from NewsAPI to fetch real-time news data.
-                  </p>
-                  <div class="flex flex-wrap gap-2">
-                    <span
-                      class="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full"
-                      >JavaScript</span
-                    >
-                    <span
-                      class="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full"
-                      >HTML</span
-                    >
-                    <span
-                      class="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full"
-                      >CSS</span
-                    >
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                  <div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">News Application</h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3 leading-relaxed">
+                      A sleek and fast news application that delivers news articles from around the world with a focus on speed, visualization, and usability. This project uses a third-party API from NewsAPI to fetch real-time news data.
+                    </p>
+                  </div>
+                  <div class="flex flex-wrap gap-2 mt-auto">
+                    <span class="px-2 py-1 bg-green-50 text-green-700 text-xs rounded-full border border-green-100">JavaScript</span>
+                    <span class="px-2 py-1 bg-green-50 text-green-700 text-xs rounded-full border border-green-100">HTML</span>
+                    <span class="px-2 py-1 bg-green-50 text-green-700 text-xs rounded-full border border-green-100">CSS</span>
                   </div>
                 </div>
               </div>
-              <div
-                class="project-back absolute inset-0 bg-green-600 text-white p-6 rounded-lg flex flex-col justify-center"
-              >
+              <div class="project-back p-6 flex flex-col justify-center shadow-md">
                 <h3 class="text-xl font-bold mb-2">News Application</h3>
-                <p class="mb-4">
-                  Stay updated with the latest news from around the world using
-                  our sleek and fast news app — built for speed, stunning
-                  visuals, and a seamless experience.
+                <p class="text-sm mb-6 leading-relaxed">
+                  Stay updated with the latest news from around the world using our sleek and fast news app — built for speed, stunning visuals, and a seamless experience.
                 </p>
                 <div class="flex space-x-4">
-                  <!-- <a
-                    href="#"
-                    class="px-4 py-2 bg-white text-green-600 rounded-full text-sm font-medium"
-                    >Live Demo</a
-                  > -->
                   <a
                     href="https://github.com/jyraut/News-Application"
-                    class="px-4 py-2 border border-white rounded-full text-sm font-medium"
-                    >Code</a
+                    target="_blank"
+                    class="px-4 py-2 border border-white rounded-xl text-sm font-semibold hover:bg-white hover:text-green-600 transition-colors flex items-center gap-1.5"
                   >
+                    <i class="fab fa-github text-xs"></i> Code
+                  </a>
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- Project 3 -->
-          <div class="project-card h-full">
-            <div class="project-inner h-full">
-              <div
-                class="project-front h-full bg-white rounded-lg overflow-hidden shadow-lg card-hover"
-              >
-                <img
-                  src="assets/flipbook.png"
-                  alt="Project 2"
-                  class="w-full h-48 object-cover"
-                />
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">Flipbook</h3>
-                  <p class="text-gray-600 mb-4">
-                    An interactive and responsive Flipbook-style PDF Viewer
-                    built using Angular and PDF.js. This project simulates a
-                    realistic book-reading experience with animated page turns
-                    and supports both desktop and mobile views.
-                  </p>
-                  <div class="flex flex-wrap gap-2">
-                    <span
-                      class="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full"
-                      >Angular</span
-                    >
-                    <span
-                      class="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full"
-                      >TypeScript</span
-                    >
-                    <span
-                      class="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full"
-                      >PDF.js</span
-                    >
-                  </div>
-                </div>
-              </div>
-              <div
-                class="project-back absolute inset-0 bg-green-600 text-white p-6 rounded-lg flex flex-col justify-center"
-              >
-                <h3 class="text-xl font-bold mb-2">Flipbook</h3>
-                <p class="mb-4">
-                  Experience realistic book reading with our interactive
-                  Flipbook PDF Viewer! Enjoy smooth page-turn animations and
-                  responsive design for both desktop and mobile — built with
-                  Angular and PDF.js.
-                </p>
-                <div class="flex space-x-4">
-                  <!-- <a
-                    href="#"
-                    class="px-4 py-2 bg-white text-green-600 rounded-full text-sm font-medium"
-                    >Live Demo</a
-                  > -->
-                  <a
-                    href="https://github.com/jyraut/flipbook-animation"
-                    class="px-4 py-2 border border-white rounded-full text-sm font-medium"
-                    >Code</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
+          
 
           <div id="extra-projects-container" class="hidden contents">
-            <!-- Project 4 -->
-            <div class="project-card h-full">
-              <div class="project-inner h-full">
-                <div
-                  class="project-front h-full bg-white rounded-lg overflow-hidden shadow-lg card-hover"
-                >
-                  <img
-                    src="assets/food-zone image.png"
-                    alt="Project 3"
-                    class="w-full h-48 object-cover"
-                  />
-                  <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">FOOD ZONE</h3>
-                    <p class="text-gray-600 mb-4">
-                      A simple and responsive food recipe search app built with
-                      React. It allows users to search for recipes by dish name
-                      and view matching meals using TheMealDB API.
+            <!-- Project 4: FLIPBOOK ANIMATION -->
+            <div class="project-card">
+            <div class="project-inner">
+              <div class="project-front flex flex-col shadow-md">
+                <img
+                  src="assets/flipbook.png"
+                  alt="Flipbook"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                  <div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">Flipbook</h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3 leading-relaxed">
+                      An interactive and responsive Flipbook-style PDF Viewer built using Angular and PDF.js. This project simulates a realistic book-reading experience with animated page turns and supports both desktop and mobile views.
                     </p>
-                    <div class="flex flex-wrap gap-2">
-                      <span
-                        class="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full"
-                        >React</span
-                      >
-                      <span
-                        class="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full"
-                        >React Router DOM</span
-                      >
-                      <span
-                        class="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full"
-                        >TheMealDB API
-                      </span>
-                    </div>
                   </div>
-                </div>
-                <div
-                  class="project-back absolute inset-0 bg-green-600 text-white p-6 rounded-lg flex flex-col justify-center"
-                >
-                  <h3 class="text-xl font-bold mb-2">FOOD ZONE</h3>
-                  <p class="mb-4">
-                    Discover delicious recipes with our simple and responsive
-                    food app! Search meals by name and explore tasty dishes
-                    instantly
-                  </p>
-                  <div class="flex space-x-4">
-                    <!-- <a
-                    href="#"
-                    class="px-4 py-2 bg-white text-green-600 rounded-full text-sm font-medium"
-                    >Live Demo</a
-                  > -->
-                    <a
-                      href="https://github.com/jyraut/food-recipe-app"
-                      class="px-4 py-2 border border-white rounded-full text-sm font-medium"
-                      >Code</a
-                    >
+                  <div class="flex flex-wrap gap-2 mt-auto">
+                    <span class="px-2 py-1 bg-green-50 text-green-700 text-xs rounded-full border border-green-100">Angular</span>
+                    <span class="px-2 py-1 bg-green-50 text-green-700 text-xs rounded-full border border-green-100">TypeScript</span>
+                    <span class="px-2 py-1 bg-green-50 text-green-700 text-xs rounded-full border border-green-100">PDF.js</span>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <!-- Project 5 -->
-            <div class="project-card h-full">
-              <div class="project-card h-full">
-                <div class="project-inner h-full">
-                  <div
-                    class="project-front h-full bg-white rounded-lg overflow-hidden shadow-lg card-hover"
+              <div class="project-back p-6 flex flex-col justify-center shadow-md">
+                <h3 class="text-xl font-bold mb-2">Flipbook</h3>
+                <p class="text-sm mb-6 leading-relaxed">
+                  Experience realistic book reading with our interactive Flipbook PDF Viewer! Enjoy smooth page-turn animations and responsive design for both desktop and mobile — built with Angular and PDF.js.
+                </p>
+                <div class="flex space-x-4">
+                  <a
+                    href="https://github.com/jyraut/flipbook-animation"
+                    target="_blank"
+                    class="px-4 py-2 border border-white rounded-xl text-sm font-semibold hover:bg-white hover:text-green-600 transition-colors flex items-center gap-1.5"
                   >
-                    <img
-                      src="assets/portfolio.png"
-                      alt="Project 3"
-                      class="w-full h-48 object-cover"
-                    />
-                    <div class="p-6">
-                      <h3 class="text-xl font-bold mb-2">My Portfolio</h3>
-                      <p class="text-gray-600 mb-4">
-                        A responsive and professional personal portfolio
-                        website. It highlights my skills, projects, experience,
-                        and provides a way for recruiters or collaborators to
-                        reach out.
+                    <i class="fab fa-github text-xs"></i> Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+            <!-- Project 5: My Portfolio -->
+            <div class="project-card">
+              <div class="project-inner">
+                <div class="project-front flex flex-col shadow-md">
+                  <img
+                    src="assets/portfolio.png"
+                    alt="My Portfolio"
+                    class="w-full h-48 object-cover"
+                  />
+                  <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                      <h3 class="text-xl font-bold mb-2 text-gray-900">My Portfolio</h3>
+                      <p class="text-gray-600 text-sm mb-4 line-clamp-3 leading-relaxed">
+                        A responsive and professional personal portfolio website. It highlights my skills, projects, experience, and provides a way for recruiters or collaborators to reach out.
                       </p>
-                      <div class="flex flex-wrap gap-2">
-                        <span
-                          class="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full"
-                          >JavaScript</span
-                        >
-                        <span
-                          class="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full"
-                          >HTML</span
-                        >
-                        <span
-                          class="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full"
-                          >CSS
-                        </span>
-                      </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                      <span class="px-2 py-1 bg-green-50 text-green-700 text-xs rounded-full border border-green-100">JavaScript</span>
+                      <span class="px-2 py-1 bg-green-50 text-green-700 text-xs rounded-full border border-green-100">HTML</span>
+                      <span class="px-2 py-1 bg-green-50 text-green-700 text-xs rounded-full border border-green-100">CSS</span>
                     </div>
                   </div>
-                  <div
-                    class="project-back absolute inset-0 bg-green-600 text-white p-6 rounded-lg flex flex-col justify-center"
-                  >
-                    <h3 class="text-xl font-bold mb-2">My Portfolio</h3>
-                    <p class="mb-4">
-                      Explore my portfolio to know more about me, my skills, and
-                      2.6 years of experience as a Frontend Developer.
-                    </p>
-                    <div class="flex space-x-4">
-                      <!-- <a
-                    href="#"
-                    class="px-4 py-2 bg-white text-green-600 rounded-full text-sm font-medium"
-                    >Live Demo</a
-                  > -->
-                      <a
-                        href="https://github.com/jyraut/my-portfolio"
-                        class="px-4 py-2 border border-white rounded-full text-sm font-medium"
-                        >Code</a
-                      >
-                    </div>
+                </div>
+                <div class="project-back p-6 flex flex-col justify-center shadow-md">
+                  <h3 class="text-xl font-bold mb-2">My Portfolio</h3>
+                  <p class="text-sm mb-6 leading-relaxed">
+                    Explore my portfolio to know more about me, my skills, and 2.6 years of experience as a Frontend Developer.
+                  </p>
+                  <div class="flex space-x-4">
+                    <a
+                      href="https://github.com/jyraut/my-portfolio"
+                      target="_blank"
+                      class="px-4 py-2 border border-white rounded-xl text-sm font-semibold hover:bg-white hover:text-green-600 transition-colors flex items-center gap-1.5"
+                    >
+                      <i class="fab fa-github text-xs"></i> Code
+                    </a>
                   </div>
                 </div>
               </div>
